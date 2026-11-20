@@ -33,6 +33,8 @@ sebo-aws/
 │   ├── listar_livros.py
 │   ├── solicitar_livro.py
 │   └── atualizar_estoque.py
+├── relatorio/
+│   ├── Relatorio_Sebo_Online
 └── README.md
 ```
 
