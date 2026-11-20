@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sebo Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <div class="logo">📚</div>
+            <h1>Sebo Online</h1>
+            <p>Encontre seu próximo livro!</p>
+        </header>
+
+        <nav class="navegacao" aria-label="Áreas do sistema">
+            <button
+                type="button"
+                id="btnCliente"
+                class="aba ativa"
+                aria-pressed="true"
+            >
+                Cliente
+            </button>
+
+            <button
+                type="button"
+                id="btnColaborador"
+                class="aba"
+                aria-pressed="false"
+            >
+                Colaborador
+            </button>
+        </nav>
+
+        <!-- Área do cliente -->
+        <div id="areaCliente">
+
+            <section>
+                <div class="titulo-secao">
+                    <h2>Nosso catálogo</h2>
+                    <p>Confira os livros da nossa livraria.</p>
+                </div>
+
+                <div id="listaLivros" class="lista-livros"></div>
+            </section>
+
+            <section>
+                <div class="titulo-secao">
+                    <h2>Solicitar um livro</h2>
+                    <p>
+                        Escolha um título e informe seu e-mail
+                        para receber uma notificação.
+                    </p>
+                </div>
+
+                <form id="formSolicitacao">
+                    <label for="livro">Escolha um livro:</label>
+                    <select id="livro" required></select>
+
+                    <label for="email">Seu e-mail:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="exemplo@email.com"
+                        required
+                    >
+
+                    <button type="submit" class="botao-principal">
+                        Solicitar livro
+                    </button>
+                </form>
+
+                <p id="mensagem" class="mensagem" aria-live="polite"></p>
+
+                <p class="observacao">
+                    As notificações são enviadas para e-mails
+                    previamente cadastrados na livraria.
+                    A solicitação não reserva o livro.
+                </p>
+            </section>
+        </div>
+
+        <!-- Área do colaborador -->
+        <div id="areaColaborador" hidden>
+
+            <section>
+                <div class="titulo-secao">
+                    <h2>Gerenciamento de estoque</h2>
+                    <p>
+                        Adicione novas unidades aos livros
+                        cadastrados na livraria.
+                    </p>
+                </div>
+
+                <div class="resumo-estoque">
+                    <div>
+                        <span>Livros cadastrados</span>
+                        <strong id="totalLivros">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Unidades em estoque</span>
+                        <strong id="totalUnidades">0</strong>
+                    </div>
+                </div>
+
+                <form id="formEstoque">
+                    <label for="livroEstoque">
+                        Selecione o livro:
+                    </label>
+
+                    <select id="livroEstoque" required></select>
+
+                    <label for="quantidade">
+                        Quantidade recebida:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantidade"
+                        min="1"
+                        step="1"
+                        value="1"
+                        required
+                    >
+
+                    <button type="submit" class="botao-principal">
+                        Atualizar estoque
+                    </button>
+                </form>
+
+                <p
+                    id="mensagemEstoque"
+                    class="mensagem"
+                    aria-live="polite"
+                ></p>
+
+                <p class="observacao">
+                    Ao atualizar o estoque, os clientes que
+                    aguardavam o livro poderão ser notificados
+                    por e-mail.
+                </p>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Sebo Online · Sua próxima história começa aqui.</p>
+        </footer>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

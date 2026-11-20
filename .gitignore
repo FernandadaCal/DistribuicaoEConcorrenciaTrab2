@@ -1,0 +1,14 @@
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+
+# Ambiente virtual
+.venv/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações sensíveis
+.env

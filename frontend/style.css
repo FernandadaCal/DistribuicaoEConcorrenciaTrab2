@@ -1,0 +1,298 @@
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f2eb;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    color: #69452e;
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    margin-top: 8px;
+    color: #827466;
+    font-size: 16px;
+}
+
+/* Navegação */
+
+.navegacao {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 6px;
+    background: #eae2d7;
+    border-radius: 12px;
+}
+
+.aba {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #69452e;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.aba:hover {
+    background: #ded1c2;
+}
+
+.aba.ativa {
+    background: white;
+    color: #69452e;
+    box-shadow: 0 2px 6px #00000010;
+}
+
+/* Seções */
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px #0000000b;
+}
+
+.titulo-secao {
+    margin-bottom: 22px;
+}
+
+h2 {
+    color: #43352b;
+    font-size: 21px;
+    margin: 0 0 6px;
+}
+
+.titulo-secao p {
+    color: #827466;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Catálogo */
+
+.lista-livros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.livro {
+    border: 1px solid #e9e3dc;
+    border-radius: 10px;
+    padding: 18px;
+    background: #fdfcf9;
+    transition: 0.2s;
+}
+
+.livro:hover {
+    border-color: #c9af98;
+    box-shadow: 0 3px 10px #0000000b;
+}
+
+.livro strong {
+    display: block;
+    color: #43352b;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.livro p {
+    color: #827466;
+    font-size: 13px;
+    margin: 0 0 12px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.disponivel {
+    background: #e7f3e9;
+    color: #397348;
+}
+
+.indisponivel {
+    background: #f7e8e3;
+    color: #a24b39;
+}
+
+/* Formulários */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #514235;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9d2ca;
+    border-radius: 7px;
+    background: white;
+    color: #333;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #8d6245;
+    box-shadow: 0 0 0 3px #8d62451a;
+}
+
+.botao-principal {
+    background: #69452e;
+    color: white;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-principal:hover {
+    background: #503320;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Mensagens */
+
+.mensagem {
+    font-size: 14px;
+    font-weight: bold;
+    color: #69452e;
+    margin-top: 16px;
+}
+
+.mensagem:empty {
+    display: none;
+}
+
+.observacao {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #91867b;
+    line-height: 1.6;
+}
+
+/* Resumo do estoque */
+
+.resumo-estoque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.resumo-estoque div {
+    background: #f5f2eb;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.resumo-estoque span {
+    display: block;
+    color: #827466;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.resumo-estoque strong {
+    color: #69452e;
+    font-size: 28px;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #91867b;
+    font-size: 12px;
+}
+
+/* Responsividade */
+
+@media (max-width: 650px) {
+    .container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .lista-livros {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-estoque {
+        gap: 10px;
+    }
+
+    .resumo-estoque div {
+        padding: 15px;
+    }
+}
